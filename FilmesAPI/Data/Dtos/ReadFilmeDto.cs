@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
-namespace FilmesAPI.Models
+namespace FilmesAPI.Data.Dtos
 {
-    public class Filme
+    public class ReadFilmeDto
     {
         [Key]
         [Required]
@@ -15,5 +16,6 @@ namespace FilmesAPI.Models
         public string Genero { get; set; }
         [Range(1, 400, ErrorMessage = "A duração minima é 1 e maxima 600")]
         public int Duracao { get; set; }
+        public DateTime HoraDaConsulta { get; set; }
     }
 }

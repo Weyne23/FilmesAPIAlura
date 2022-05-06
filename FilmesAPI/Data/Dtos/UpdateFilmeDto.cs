@@ -1,12 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace FilmesAPI.Models
+namespace FilmesAPI.Data.Dtos
 {
-    public class Filme
+    public class UpdateFilmeDto
     {
-        [Key]
-        [Required]
-        public int Id { get; set; }
         [Required(ErrorMessage = "O campo titulo é obrigratorio")]
         public string Titulo { get; set; }
         [Required(ErrorMessage = "O campo diretor é obrigratorio")]
